@@ -55,6 +55,7 @@ printf "$Green  / ____/___ _/ /______/ /_  / ____/___ _____ ___  $Endc"
 printf "$Green / /   / __  / __/ ___/ __ \/ /   / __  / __  __ \ $Endc"
 printf "$Green/ /___/ /_/ / /_/ /__/ / / / /___/ /_/ / / / / / / $Endc"
 printf "$Green\____/\__,_/\__/\___/_/ /_/\____/\__,_/_/ /_/ /_/ $Endc"
+printf " \e[1;77m[\e[1;93m::\e[0m\e[1;77m]              v1.0 coded by @Ch33chOficial              \e[1;77m[\e[1;93m::\e[0m\e[1;77m]\e[0m\n"
 
 }
 
