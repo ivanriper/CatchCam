@@ -50,11 +50,11 @@ user_interrupt(){
 banner() {
 
 clear
-printf "$Green   ______      __       __    ______ $Endc"
-printf "$Green  / ____/___ _/ /______/ /_  / ____/___ _____ ___  $Endc"
-printf "$Green / /   / __  / __/ ___/ __ \/ /   / __  / __  __ \ $Endc"
-printf "$Green/ /___/ /_/ / /_/ /__/ / / / /___/ /_/ / / / / / / $Endc"
-printf "$Green\____/\__,_/\__/\___/_/ /_/\____/\__,_/_/ /_/ /_/ $Endc"
+printf "$Green   ______      __       __  ${Y}   ______ $Endc"
+printf "$Green  / ____/___ _/ /______/ /_  ${Y} / ____/___ _____ ___  $Endc"
+printf "$Green / /   / __  / __/ ___/ __ \${Y} / /   / __  / __  __ \ $Endc"
+printf "$Green/ /___/ /_/ / /_/ /__/ / / /${Y}/___/ /_/ / / / / / / $Endc"
+printf "$Green\____/\__,_/\__/\___/_/ /_/${Y} \____/\__,_/_/ /_/ /_/ $Endc"
 
 }
 
